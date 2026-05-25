@@ -1,0 +1,377 @@
+{
+  "args": {
+    "split": "validation",
+    "pipeline": "hybrid",
+    "n_samples": 5,
+    "top_k": 4,
+    "model": "llama-3.3-70b-versatile",
+    "output_dir": "results",
+    "skip_ragas": false
+  },
+  "metrics": {
+    "em": 0.2,
+    "f1": 0.3333333333333333,
+    "sp_em": 0.0,
+    "sp_f1": 0.27999999999999997,
+    "sp_prec": 0.36666666666666664,
+    "sp_recall": 0.26666666666666666,
+    "joint_em": 0.0,
+    "joint_f1": 0.16666666666666666,
+    "faithfulness": NaN
+  },
+  "timing": {
+    "start_time": "2026-03-16T16:26:46.508669",
+    "end_time": "2026-03-16T16:27:38.460717",
+    "total_duration_seconds": 51.952048,
+    "average_time_per_sample": 10.3904096,
+    "samples_per_minute": 5.77455579806979
+  },
+  "details": [
+    {
+      "id": "5ae143ed55429920d5234360",
+      "question": "In what year was the university where Sergei Aleksandrovich Tokarev was a professor founded?",
+      "gold_answer": "1755",
+      "gold_sp": [
+        {
+          "title": "Sergei Aleksandrovich Tokarev",
+          "sent_id": 0
+        },
+        {
+          "title": "Moscow State University",
+          "sent_id": 3
+        }
+      ],
+      "pred_answer": "Not specified in the context",
+      "pred_sp": [
+        {
+          "title": "Sergei Aleksandrovich Tokarev",
+          "sent_id": 0
+        },
+        {
+          "title": "Moscow State University",
+          "sent_id": 0
+        },
+        {
+          "title": "Moscow State University",
+          "sent_id": 2
+        }
+      ],
+      "retrieved_context": [
+        {
+          "title": "Sergei Aleksandrovich Tokarev",
+          "sent_id": 0,
+          "text": "Sergei Aleksandrovich Tokarev (Russian: \u0421\u0435\u0440\u0433\u0435\u0301\u0439 \u0410\u043b\u0435\u043a\u0441\u0430\u0301\u043d\u0434\u0440\u043e\u0432\u0438\u0447 \u0422\u043e\u0301\u043a\u0430\u0440\u0435\u0432 , 29 December 1899 \u2013 19 April 1985) was a Russian scholar, ethnographer, historian, researcher of religious beliefs, doctor of historical sciences, and professor at Moscow State University.",
+          "score": 0.03278688524590164
+        },
+        {
+          "title": "Moscow State University",
+          "sent_id": 0,
+          "text": "Lomonosov Moscow State University (MSU; Russian: \u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0438\u0439 \u0433\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u0438\u043c\u0435\u043d\u0438 \u041c.",
+          "score": 0.031024531024531024
+        },
+        {
+          "title": "Sergei Aleksandrovich Kudryavtsev",
+          "sent_id": 0,
+          "text": "Sergei Aleksandrovich Kudryavtsev (1903 \u2013 April 25, 1938) was a Ukrainian communist Soviet politician.",
+          "score": 0.030621785881252923
+        },
+        {
+          "title": "Moscow State University",
+          "sent_id": 2,
+          "text": " \u041b\u043e\u043c\u043e\u043d\u043e\u0441\u043e\u0432\u0430 , often abbreviated \u041c\u0413\u0423) is a coeducational and public research university located in Moscow, Russia.",
+          "score": 0.03057889822595705
+        }
+      ],
+      "time_taken": 1.1624929904937744,
+      "pipeline": "HybridRAG",
+      "raw_prediction": {
+        "answer": "Not specified in the context",
+        "supporting_facts": [
+          {
+            "title": "Sergei Aleksandrovich Tokarev",
+            "sent_id": 0
+          },
+          {
+            "title": "Moscow State University",
+            "sent_id": 0
+          },
+          {
+            "title": "Moscow State University",
+            "sent_id": 2
+          }
+        ]
+      },
+      "faithfulness": 1.0
+    },
+    {
+      "id": "5abc19705542993a06baf86e",
+      "question": "Black Book starred the actress and writer of what heritage?",
+      "gold_answer": "Dutch",
+      "gold_sp": [
+        {
+          "title": "Black Book (film)",
+          "sent_id": 0
+        },
+        {
+          "title": "Halina Reijn",
+          "sent_id": 0
+        }
+      ],
+      "pred_answer": "Dutch",
+      "pred_sp": [
+        {
+          "title": "Halina Reijn",
+          "sent_id": 0
+        },
+        {
+          "title": "Black Book (novel)",
+          "sent_id": 1
+        }
+      ],
+      "retrieved_context": [
+        {
+          "title": "Black Book (World War II)",
+          "sent_id": 0,
+          "text": "The Black Book: The Ruthless Murder of Jews by German-Fascist Invaders Throughout the Temporarily-Occupied Regions of the Soviet Union and in the German Nazi Death Camps established on occupied Polish soil during the War 1941\u20131945 alternatively The Black Book of the Holocaust, or simply The Black Book (Russian: \u0427\u0451\u0440\u043d\u0430\u044f \u041a\u043d\u0438\u0433\u0430 , \"Chornaya Kniga\"; Yiddish: \u05d3\u05d0\u05b8\u05e1 \u05e9\u05d5\u05d5\u05d0\u05b7\u05e8\u05e6\u05e2 \u05d1\u05d5\u05da\u200e , \"Dos shvartse bukh\"), was a result of the collaborative effort by the Jewish Anti-Fascist Committee (JAC) and members of the American Jewish community to document the anti-Jewish crimes of the Holocaust and the participation of Jews in the fighting and the resistance movement against the Nazis during World War II.",
+          "score": 0.030330882352941176
+        },
+        {
+          "title": "Halina Reijn",
+          "sent_id": 0,
+          "text": "Halina Reijn (born 10 November 1975) is a Dutch actress and writer.",
+          "score": 0.02976190476190476
+        },
+        {
+          "title": "Black Book (non-standard disc format)",
+          "sent_id": 0,
+          "text": "Black Book is an unofficial designation of optical disc (OD) formats that defy official standards for CD, DVD, HD DVD and Blu-ray Discs. Most formats considered Black Book are formats used for video games or Digital Rights Management.",
+          "score": 0.029513888888888888
+        },
+        {
+          "title": "Black Book (novel)",
+          "sent_id": 1,
+          "text": " It is the novelization of the Dutch film \"Black Book\" (2006).",
+          "score": 0.029206349206349208
+        }
+      ],
+      "time_taken": 0.7728524208068848,
+      "pipeline": "HybridRAG",
+      "raw_prediction": {
+        "answer": "Dutch",
+        "supporting_facts": [
+          {
+            "title": "Halina Reijn",
+            "sent_id": 0
+          },
+          {
+            "title": "Black Book (novel)",
+            "sent_id": 1
+          }
+        ]
+      },
+      "faithfulness": 1.0
+    },
+    {
+      "id": "5ac3e0f7554299194317388b",
+      "question": "Which actor does American Beauty and American Beauty have in common?",
+      "gold_answer": "Kevin Spacey",
+      "gold_sp": [
+        {
+          "title": "American Beauty (soundtrack)",
+          "sent_id": 0
+        },
+        {
+          "title": "American Beauty (1999 film)",
+          "sent_id": 1
+        }
+      ],
+      "pred_answer": "None",
+      "pred_sp": [
+        {
+          "title": "American Beauty (1999 film)",
+          "sent_id": 0
+        },
+        {
+          "title": "American Beauty (1927 film)",
+          "sent_id": 0
+        },
+        {
+          "title": "La Belle Am\u00e9ricaine",
+          "sent_id": 0
+        },
+        {
+          "title": "Christopher Greenbury",
+          "sent_id": 2
+        }
+      ],
+      "retrieved_context": [
+        {
+          "title": "American Beauty (1999 film)",
+          "sent_id": 0,
+          "text": "American Beauty is a 1999 American drama film directed by Sam Mendes and written by Alan Ball.",
+          "score": 0.03225806451612903
+        },
+        {
+          "title": "American Beauty (1927 film)",
+          "sent_id": 0,
+          "text": "American Beauty is a lost 1927 American silent film romantic drama produced and distributed by First National Pictures.",
+          "score": 0.03125763125763126
+        },
+        {
+          "title": "La Belle Am\u00e9ricaine",
+          "sent_id": 0,
+          "text": "La Belle Am\u00e9ricaine English: The American Beauty , is a French comedy film from 1961, directed by Robert Dh\u00e9ry, written by Alfred Adam, starring Alfred Adam and Louis de Fun\u00e8s.",
+          "score": 0.03036576949620428
+        },
+        {
+          "title": "Christopher Greenbury",
+          "sent_id": 2,
+          "text": " \"American Beauty\" is a serious drama, but in general Greenbury edited comedy films, including six directed by the Farrelly brothers commencing with 1994's \"Dumb and Dumber\".",
+          "score": 0.03028233151183971
+        }
+      ],
+      "time_taken": 0.7435798645019531,
+      "pipeline": "HybridRAG",
+      "raw_prediction": {
+        "answer": "None",
+        "supporting_facts": [
+          {
+            "title": "American Beauty (1999 film)",
+            "sent_id": 0
+          },
+          {
+            "title": "American Beauty (1927 film)",
+            "sent_id": 0
+          },
+          {
+            "title": "La Belle Am\u00e9ricaine",
+            "sent_id": 0
+          },
+          {
+            "title": "Christopher Greenbury",
+            "sent_id": 2
+          }
+        ]
+      },
+      "faithfulness": 0.0
+    },
+    {
+      "id": "5ae518655542993aec5ec139",
+      "question": "Ken Pruitt  was a Republican member of an upper house of the legislature with how many members ?",
+      "gold_answer": "40 members",
+      "gold_sp": [
+        {
+          "title": "Ken Pruitt",
+          "sent_id": 0
+        },
+        {
+          "title": "Florida Senate",
+          "sent_id": 0
+        },
+        {
+          "title": "Florida Senate",
+          "sent_id": 2
+        }
+      ],
+      "pred_answer": "40",
+      "pred_sp": [
+        {
+          "title": "Ken Pruitt",
+          "sent_id": 0
+        }
+      ],
+      "retrieved_context": [
+        {
+          "title": "Ken Pruitt",
+          "sent_id": 0,
+          "text": "Ken Pruitt (born January 24, 1957) was a Republican member of the Florida Senate, representing the 28th District from 2000 to 2009.",
+          "score": 0.03278688524590164
+        },
+        {
+          "title": "Nevada Legislature",
+          "sent_id": 2,
+          "text": " All 63 members of the Legislature are elected from an equal amount of constituent districts across the state.",
+          "score": 0.030776515151515152
+        },
+        {
+          "title": "Wisconsin Legislature",
+          "sent_id": 2,
+          "text": " With both houses combined, the legislature has 132 members representing an equal number of constituent districts.",
+          "score": 0.030621785881252923
+        },
+        {
+          "title": "Wisconsin Legislature",
+          "sent_id": 1,
+          "text": " The Legislature is a bicameral body composed of the upper house Wisconsin State Senate and the lower Wisconsin State Assembly, both of which have had Republican majorities since January 2011.",
+          "score": 0.030090497737556562
+        }
+      ],
+      "time_taken": 0.41272521018981934,
+      "pipeline": "HybridRAG",
+      "raw_prediction": {
+        "answer": "40",
+        "supporting_facts": [
+          {
+            "title": "Ken Pruitt",
+            "sent_id": 0
+          }
+        ]
+      },
+      "faithfulness": NaN
+    },
+    {
+      "id": "5ab985eb554299131ca42360",
+      "question": "Between Greyia and Calibanus, which genus contains more species?",
+      "gold_answer": "Greyia",
+      "gold_sp": [
+        {
+          "title": "Greyia",
+          "sent_id": 0
+        },
+        {
+          "title": "Greyia",
+          "sent_id": 1
+        },
+        {
+          "title": "Calibanus",
+          "sent_id": 0
+        }
+      ],
+      "pred_answer": "Unknown",
+      "pred_sp": [],
+      "retrieved_context": [
+        {
+          "title": "Greyia",
+          "sent_id": 0,
+          "text": "Greyia is a genus of plant in family Melianthaceae.",
+          "score": 0.03252247488101534
+        },
+        {
+          "title": "Greyia",
+          "sent_id": 1,
+          "text": " It contains three species:",
+          "score": 0.03125763125763126
+        },
+        {
+          "title": "Lophodermium",
+          "sent_id": 1,
+          "text": " The genus contains 145 species and has a global distribution.",
+          "score": 0.030776515151515152
+        },
+        {
+          "title": "Banksiamyces",
+          "sent_id": 1,
+          "text": " The genus contains four species, which grow on the seed follicles of the dead infructescences or \"cones\" of various species of \"Banksia\", a genus in the plant family Proteaceae endemic to Australia.",
+          "score": 0.02976190476190476
+        }
+      ],
+      "time_taken": 0.5645139217376709,
+      "pipeline": "HybridRAG",
+      "raw_prediction": {
+        "answer": "Unknown",
+        "supporting_facts": []
+      },
+      "faithfulness": 0.3333333333333333
+    }
+  ]
+}

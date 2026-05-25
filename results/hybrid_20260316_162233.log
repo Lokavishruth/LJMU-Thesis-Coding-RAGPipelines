@@ -1,0 +1,14 @@
+2026-03-16 16:22:33,225 - INFO - Starting experiment: Namespace(split='validation', pipeline='hybrid', n_samples=5, top_k=4, model='llama-3.3-70b-versatile', output_dir='results', skip_ragas=False)
+2026-03-16 16:22:33,225 - INFO - Experiment start time: 2026-03-16 16:22:33
+2026-03-16 16:22:33,226 - INFO - Loading dataset...
+2026-03-16 16:22:33,731 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-16 16:22:33,967 - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/hotpotqa/hotpot_qa/1908d6afbbead072334abe2965f91bd2709910ab/README.md "HTTP/1.1 200 OK"
+2026-03-16 16:22:34,233 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/hotpot_qa.py "HTTP/1.1 404 Not Found"
+2026-03-16 16:22:35,320 - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/hotpotqa/hotpot_qa/hotpotqa/hotpot_qa.py "HTTP/1.1 404 Not Found"
+2026-03-16 16:22:35,671 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/hotpotqa/hotpot_qa/revision/1908d6afbbead072334abe2965f91bd2709910ab "HTTP/1.1 200 OK"
+2026-03-16 16:22:35,937 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-03-16 16:22:36,364 - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=hotpotqa/hotpot_qa "HTTP/1.1 200 OK"
+2026-03-16 16:22:36,678 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/hotpotqa/hotpot_qa/tree/1908d6afbbead072334abe2965f91bd2709910ab/distractor?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-16 16:22:36,915 - INFO - HTTP Request: GET https://huggingface.co/api/datasets/hotpotqa/hotpot_qa/tree/1908d6afbbead072334abe2965f91bd2709910ab?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-03-16 16:22:37,153 - INFO - HTTP Request: HEAD https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-03-16 16:22:37,737 - INFO - Loaded 5 samples.
