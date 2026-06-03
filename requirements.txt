@@ -1,0 +1,32 @@
+# ── Core ────────────────────────────────────────────────────────────────────
+datasets
+numpy              # latest (numpy 2.x) — matches Colab's base image, no ABI break
+groq
+tqdm
+python-dotenv      # loads .env (Qdrant/Pinecone credentials)
+
+# ── Retrieval ────────────────────────────────────────────────────────────────
+rank-bm25
+sentence-transformers
+
+# ── Vector Databases (install only the one(s) you need) ─────────────────────
+faiss-cpu          # FAISS backend
+lancedb            # LanceDB backend
+chromadb           # ChromaDB backend
+qdrant-client      # Qdrant backend
+pinecone           # Pinecone backend
+
+# ── Graph (05_GraphRAG, 06_MultiStageGraphRAG only) ──────────────────────────
+networkx
+spacy
+# After installing spacy, run: python -m spacy download en_core_web_sm
+
+# ── LLM / Evaluation ─────────────────────────────────────────────────────────
+# Latest ragas. The eval cell shims langchain_community.chat_models.vertexai ->
+# langchain-google-vertexai so ragas' llm_factory import resolves; faithfulness
+# comes from ragas.metrics.collections and the Groq LLM is passed to evaluate().
+ragas
+langchain-groq
+langchain-core
+langchain-community
+langchain-google-vertexai

@@ -1,5 +1,6 @@
 # Secrets
 api_keys.csv
+.env
 
 # Virtual environments
 .venv/
@@ -9,3 +10,6 @@ venv/
 __pycache__/
 *.py[cod]
 *$py.class
+.gitignore
+.claude
+COLAB_SETUP.md
